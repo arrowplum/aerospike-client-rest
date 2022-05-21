@@ -22,7 +22,9 @@ jobs:
 
       - name: Set up Aerospike Database
         uses: reugn/github-action-aerospike@dev
-
+        with: 
+          config-file: .github/resources/aerospike.conf
+          feature-key-file: .github/resources/features.conf
       - name: Cache Gradle packages
         uses: actions/cache@v2
         with:
